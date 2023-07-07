@@ -75,16 +75,16 @@ You can find the list of permission scopes required by each component in the **M
 
 ## Custom Hosts
 
-You can add custom hsots to pass through to the graph client to allow AAD secured apis to be called
+You can add custom hosts to pass through to the graph client which will allow you to call non-Graph AAD secured apis. **Make sure you request the scope for the access token**
 
 ```HTML
 <script src="https://unpkg.com/@microsoft/mgt@2/dist/bundle/mgt-loader.js"></script>
 <mgt-msal2-provider client-id="YOUR_CLIENT_ID"
-                   custom-hosts="myapi.com,anotherapi.com"
-                   ></mgt-msal2-provider>
+                    custom-hosts="myapi.com,anotherapi.com"
+></mgt-msal2-provider>
 ```
 
-If you're initializing the provider in code, provide the host names of the customHosts in an array in the `customHosts` property.
+If you're initializing the provider in code, provide the host names in an array in the `customHosts` property.
 
 ```js
 import {Providers, Msal2Provider } from "@microsoft/mgt";
